@@ -1,0 +1,20 @@
+#myH1 {
+    text-transform: uppercase;
+    text-decoration: overline underline;
+    color: black;
+    text-shadow: 2px 2px 4px grey;
+}
+#myButton {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 2px 2px 4px grey;
+}
+#myButton:hover {
+    background-color: black;
+    color: white;
+}

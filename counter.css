@@ -1,0 +1,30 @@
+body {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#counter {
+    font-size: 7rem;
+}
+.btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: hsl(252, 86%, 50%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.btn:hover {
+    background-color: hsl(252, 86%, 70%);
+}
+#myh1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-decoration: underline overline hsl(252, 86%, 50%);
+    text-shadow: 2px 2px 4px hsl(252, 86%, 50%);
+}
+
