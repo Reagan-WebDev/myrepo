@@ -1,0 +1,15 @@
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+const squares = numbers.map((element) => Math.pow(element, 2));
+const cubes = numbers.map((element) => Math.pow(element, 3));
+const total = numbers.reduce((accumulator, element) => accumulator + element);
+const isEven = numbers.filter((element) => element % 2 === 0);
+const isOdd = numbers.filter((element) => element % 2 !== 0);
+const max = numbers.reduce((accumulator, element) => Math.max(accumulator, element));
+const min = numbers.reduce((accumulator, element) => Math.min(accumulator, element));
+console.log(squares);
+console.log(cubes);
+console.log(total);
+console.log(isEven);
+console.log(isOdd);
+console.log(max);
+console.log(min);
