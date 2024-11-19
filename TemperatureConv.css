@@ -1,0 +1,57 @@
+body {
+    background-color: hsl(0, 1%, 80%);
+    text-align: center;
+}
+form {
+    background-color: white;
+    max-width: 50%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 5px hsl(0, 2%, 70%);
+}
+#myH1 {
+    color: hsl(240, 100%, 70%);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+#myInput {
+    text-align: center;
+    font-size: 20px;
+    width: 50%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 4px;
+}
+label {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#mySubmit {
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: hsl(0, 88%, 50%);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+#mySubmit:hover {
+    background-color: hsl(0, 88%, 65%);
+}
+#mySubmit.active {
+    background-color: hsl(0, 88%, 80%);
+}
+#myP {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
