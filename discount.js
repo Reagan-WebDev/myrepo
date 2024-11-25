@@ -7,9 +7,9 @@ document.getElementById("myButton").onclick = function() {
     PriceOfCommodity = Number(PriceOfCommodity);
     if(PriceOfCommodity > 1500){
         PriceOfCommodity = PriceOfCommodity - (PriceOfCommodity * (10 / 100));
-        return myP.textContent = "Ksh" + PriceOfCommodity;
+        return myP.textContent = "Ksh" + PriceOfCommodity.toFixed(2);
     }
     else{
-        return myP.textContent = "Ksh" + PriceOfCommodity;
+        return myP.textContent = "Ksh" + PriceOfCommodity.toFixed(2);
     }
 }
