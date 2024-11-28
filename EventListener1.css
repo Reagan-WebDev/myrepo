@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+#myBox {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+#myButton {
+    background-color: hsl(120, 100%, 25%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#myButton:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+#myButton:active {
+    background-color: hsl(120, 100%, 40%);
+}
