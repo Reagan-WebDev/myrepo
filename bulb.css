@@ -1,0 +1,15 @@
+img {
+    height: 150px;
+}
+button {
+    background-color: hsl(0, 4%, 20%);
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+button:hover {
+    background-color: hsl(0, 4%, 30%);
+}
