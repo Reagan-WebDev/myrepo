@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+img {
+    height: 150px;
+}
+h1 {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+}
+button {
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+button:hover {
+    background-color: hsl(0, 0%, 90%);
+}
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
