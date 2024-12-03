@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Program</title>
+    <link rel="stylesheet" href="WelcomeProgram.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Reagan Enterprises</h1>
+        <p>Please enter your name to receive a warm welcome!</p>
+
+        <input type="text" id="customerName" placeholder="Enter your name" required>
+        <button onclick="welcomeCustomer()">Submit</button>
+
+        <div id="welcomeMessage" style="display:none;">
+            <h2>Welcome <span id="customerDisplayName"></span>!</h2>
+            <button onclick="thankCustomer()">Done</button>
+        </div>
+
+        <div id="thankYouMessage" style="display:none;">
+            <h2>Thank you for visiting, <span id="thankYouCustomerName"></span>!</h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="WelcomeProgram.js"></script>
+</body>
+</html>
