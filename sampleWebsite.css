@@ -1,0 +1,45 @@
+body {
+    background-color: hsl(195, 53%, 90%);
+    margin: 0;
+}
+header{
+    background-color: hsl(0, 0%, 50%);
+}
+h1 {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    transition: 2s;
+}
+h1:hover {
+    color: blue;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px lightblue;
+    text-align: center;
+}
+header a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+header a:hover {
+    color: white;
+}
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+.mainContent{
+    background-color: black;
+    color: white;
+}
+footer {
+    background-color: hsl(0, 0%, 50%);
+    text-align: center;
+}
+
+
+
