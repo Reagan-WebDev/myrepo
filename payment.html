@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReaganOT Website</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="icon" href="images/r.png">
+</head>
+<body>
+    <form>
+        <h1>Making Payments</h1>
+        <input type="checkbox" id="myMpesa">
+        <label for="myMpesa">Mpesa</label><br>
+        <input type="radio" id="sendMoney" name="method">
+        <label for="sendMoney">Send Money</label><br>
+        <input type="radio" id="BuyGoods" name="method">
+        <label for="BuyGoods">Buy Goods</label><br>
+        <input type="radio" id="paybill" name="method">
+        <label for="paybill">Paybill</label><br><br>
+        <button type="button" id="initiate">Submit</button>
+        <p id="methodofpayment"></p>
+        <p id="typeofpayment"></p>
+    </form>
+    <script src="payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    background-color: hsl(0, 0%, 90%);
+    margin: 0;
+    text-align: center;
+}
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px hsl(0, 0%, 80%);
+}
+h1 {
+    color: green;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+label {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+button {
+    background-color: hsl(120, 100%, 25%);
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+button:active {
+    background-color: hsl(120, 100%, 25%);
+}
+#methodofpayment {
+    font-size: 25px;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+#typeofpayment {
+    font-size: 25px;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
