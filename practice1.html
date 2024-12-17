@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <div id="myDiv">
+        <h1>ReaganOT</h1>
+        <p>Third Yr student at Pwani University</p>
+    </div>
+    <script>
+        const para = document.createElement("p");
+        const node = document.createTextNode("He pursues Bsc Telecoms and IT");
+        para.appendChild(node);
+        const element = document.getElementById("myDiv");
+        element.appendChild(para);
+    </script>
+    <script>
+        const parag = document.createElement("p");
+        const nodel = document.createTextNode("He Studied at Ruaraka High School");
+        parag.appendChild(nodel);
+        const Element = document.getElementById("myDiv");
+        Element.appendChild(parag);
+    </script>
+</body>
+</html>
