@@ -1,0 +1,23 @@
+const price = document.getElementById("price");
+const myButton = document.getElementById("myButton");
+const cost = document.getElementById("cost");
+const myDepo = document.getElementById("myDepo");
+const myRem = document.getElementById("myRem");
+const AmountPerMonth = document.getElementById("AmountPerMonth");
+const period = document.getElementById("period");
+let costofvehicle;
+let amountpermonth = 20000;
+let deposit;
+let remainingamount;
+let periodofpayment;
+myButton.addEventListener("click", () => {
+    costofvehicle = document.getElementById("price").value;
+    cost.textContent = `Cost Of Vehicle: Ksh. ${costofvehicle}`;
+    deposit = (30 / 100) * costofvehicle;
+    myDepo.textContent = `Deposit: Ksh. ${deposit.toFixed(2)}`;
+    remainingamount = costofvehicle - deposit;
+    myRem.textContent = `Balance: Ksh. ${remainingamount.toFixed(2)}`;
+    AmountPerMonth.textContent = `Payment Per Month: Ksh. ${amountpermonth.toFixed(2)}`;
+    periodofpayment = (remainingamount / amountpermonth) / 12;
+    period.textContent = `Period Of Payment: ${periodofpayment.toFixed(2)}Yr(s)`;
+});

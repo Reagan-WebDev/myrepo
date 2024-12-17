@@ -1,0 +1,90 @@
+body {
+    background-color: hsl(120, 100%, 30%);
+    margin: 0;
+    text-align: center;
+}
+form {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px hsl(0, 0%, 75%);
+}
+img {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+#myh1 {
+    text-transform: uppercase;
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+label {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: green;
+}
+#price {
+    color: green;
+    font-weight: bold;
+    max-width: 50%;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 90%);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: hsl(120, 100%, 25%);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+button:active {
+    background-color: hsl(120, 100%, 35%);
+}
+#myDepo {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#myRem {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#AmountPerMonth {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#period {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#cost {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
