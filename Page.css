@@ -1,0 +1,35 @@
+body {
+    background-color: hsl(0, 0%, 90%);
+    margin: 0;
+    text-align: center;
+}
+.div1 {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 4px blue;
+}
+h1{
+    padding-top: 30px;
+}
+.div2 img {
+    width: 500px;
+    height: auto;
+    border: none;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+img:hover {
+    border: 1px solid yellow;
+}
+footer {
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-style: italic;
+    font-weight: bold;
+}
