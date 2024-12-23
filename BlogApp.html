@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog App</title>
+    <link rel="stylesheet" href="BlogApp.css">
+    <link rel="icon" href="images/r.png">
+</head>
+<body>
+    <div class="container">
+        <h1>My Simple Blog</h1>
+        <div class="post-input">
+            <textarea id="postContent" placeholder="Write your blog post..."></textarea>
+            <button onclick="createPost()">Add Post</button>
+        </div>
+        <div id="postsList" class="posts-list">
+            <!-- Blog posts will appear here -->
+        </div>
+    </div>
+    <script src="BlogApp.js"></script>
+</body>
+</html>
