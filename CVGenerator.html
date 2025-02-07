@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>CV Generator</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <textarea id="education" placeholder="Education"></textarea>
+        <textarea id="experience" placeholder="Experience"></textarea>
+        <textarea id="skills" placeholder="Skills"></textarea>
+        <input type="file" id="profilePic" accept="image/*" onchange="previewImage(event)">
+        <img id="preview" class="hidden" alt="Profile Preview">
+        <button onclick="generateCV()">Download CV</button>
+    </div>
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                preview.src = reader.result;
+                preview.classList.remove('hidden');
+            };
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function generateCV() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const education = document.getElementById('education').value;
+            const experience = document.getElementById('experience').value;
+            const skills = document.getElementById('skills').value;
+            const profilePic = document.getElementById('preview').src;
+            
+            let cvContent = `
+                <div style='width: 600px; padding: 20px; font-family: Arial, sans-serif; position: relative;'>
+                    ${profilePic ? `<img src='${profilePic}' style='width:100px; height:100px; border-radius:50%; position: absolute; top: 20px; right: 20px;'>` : ''}
+                    <h1>${name}</h1>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Phone:</strong> ${phone}</p>
+                    <h2>Education</h2>
+                    <p>${education}</p>
+                    <h2>Experience</h2>
+                    <p>${experience}</p>
+                    <h2>Skills</h2>
+                    <p>${skills}</p>
+                </div>`;
+            
+            const printWindow = window.open('', '', 'width=800,height=600');
+            printWindow.document.write(cvContent);
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</body>
+</html>
