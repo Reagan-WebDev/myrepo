@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Billing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Supermarket Billing System</h2>
+        <input type="text" id="item" placeholder="Item Name">
+        <input type="number" id="price" placeholder="Price">
+        <button onclick="addItem()">Add Item</button>
+        <ul id="itemsList"></ul>
+        <h3>Total: Ksh <span id="total">0</span></h3>
+        <input type="number" id="amountPaid" placeholder="Amount Paid">
+        <button onclick="calculateBalance()">Calculate Balance</button>
+        <h3>Balance: Ksh <span id="balance">0</span></h3>
+        <button onclick="downloadReceipt()">Download Receipt</button>
+    </div>
+    
+    <script>
+        let items = [];
+        let totalAmount = 0;
+
+        function addItem() {
+            let itemName = document.getElementById("item").value;
+            let itemPrice = parseFloat(document.getElementById("price").value);
+            if (itemName && itemPrice) {
+                items.push({ name: itemName, price: itemPrice });
+                totalAmount += itemPrice;
+                document.getElementById("total").innerText = totalAmount;
+                let listItem = document.createElement("li");
+                listItem.innerText = `${itemName} - Ksh ${itemPrice}`;
+                document.getElementById("itemsList").appendChild(listItem);
+                document.getElementById("item").value = "";
+                document.getElementById("price").value = "";
+            }
+        }
+
+        function calculateBalance() {
+            let amountPaid = parseFloat(document.getElementById("amountPaid").value);
+            let balance = amountPaid - totalAmount;
+            document.getElementById("balance").innerText = balance >= 0 ? balance : "Insufficient Funds";
+        }
+
+        function downloadReceipt() {
+            let receiptContent = "Supermarket Receipt\n\n";
+            items.forEach(item => {
+                receiptContent += `${item.name}: Ksh ${item.price}\n`;
+            });
+            receiptContent += `\nTotal: Ksh ${totalAmount}\n`;
+            receiptContent += `Amount Paid: Ksh ${document.getElementById("amountPaid").value}\n`;
+            receiptContent += `Balance: Ksh ${document.getElementById("balance").innerText}\n`;
+            
+            let blob = new Blob([receiptContent], { type: "text/plain" });
+            let a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "receipt.txt";
+            a.click();
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 50%;
+            margin: auto;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</body>
+</html>
